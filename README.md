@@ -24,7 +24,7 @@ Once you have these two installed you may go ahead and:
 5. Happy Building!
 
 ## Contributing
-I have included all the Features and User Stories that need to be built for the app to be production ready.  You may go ahead and fork this repo into your GitHub account, and create feature branches for each issue you want to resolve.
+[I have included all the Features and User Stories that need to be built for the app to be production ready](https://github.com/liwoo/malawi-stock-exchange/issues).  You may go ahead and fork this repo into your GitHub account, and create feature branches for each issue you want to resolve.
 
 After completing a feature, you can go ahead and open a pull request on this repository that clearly references the Issue that is being closed.  I will then go ahead and merge those PRs that successfully close the issue.
 
