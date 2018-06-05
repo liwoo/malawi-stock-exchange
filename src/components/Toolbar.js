@@ -18,8 +18,9 @@ export default class Toolbar extends React.Component<Props> {
         if (this.props.withBackBtn) {
             Icon = (
                 <TouchableNativeFeedback onPress={this.props.goBack}>
-                    <View style={{ padding: 20, position: 'absolute', zIndex: 80 }}>
+                    <View style={{ padding: 20, position: 'absolute', zIndex: 80, flexDirection: 'row' }}>
                         <Ionicons name="ios-arrow-back" height={40} color="white" style={{ fontSize: 25 }} />
+                        <Text style={{ paddingLeft: 10, color: '#fff' }}>Back</Text>
                     </View>
                 </TouchableNativeFeedback>
             )

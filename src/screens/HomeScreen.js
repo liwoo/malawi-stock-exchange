@@ -1,6 +1,6 @@
 //@flow
 import React from 'react'
-import { Text, View, FlatList, StatusBar, StyleSheet, Animated, Button } from 'react-native'
+import { AsyncStorage, Text, View, FlatList, StatusBar, StyleSheet, Animated, Button } from 'react-native'
 import { CompanyItem, Toolbar } from '../components'
 import type { Rate } from '../api/types';
 import rates from '../api/rates';
@@ -20,7 +20,6 @@ export default class HomeScreen extends React.Component<{}, State> {
     state = {
         scrollY: new Animated.Value(0)
     }
-
     render() {
         const toolbarHeight = this.state.scrollY.interpolate({
             inputRange: [0, 140],
@@ -60,7 +59,7 @@ export default class HomeScreen extends React.Component<{}, State> {
 
         const todaysRates: Array<Rate> = rates;
         const data = rates.map(r => Object.assign({}, r, { key: r.id.toLocaleString() }));
-
+        const { symbol, broker, brokerNumber } = this.props.screenProps
         return (
             <View style={styles.mainContiner}>
                 <Toolbar height={toolbarHeight} titleOpacity={toolbarTitleOpacity} />
@@ -79,7 +78,7 @@ export default class HomeScreen extends React.Component<{}, State> {
                             { nativeEvent: { contentOffset: { y: this.state.scrollY } } }
                         ])}
                         data={data}
-                        renderItem={({ item }) => <CompanyItem rate={item} onPress={(id) => this.props.navigation.navigate('Details', { itemId: id })} />}
+                        renderItem={({ item }) => <CompanyItem symbol={symbol} rate={item} onPress={(id) => this.props.navigation.navigate('Details', { id, symbol, brokerNumber })} />}
                     />
                 </Animated.View>
             </View >

@@ -1,8 +1,7 @@
-//@flow
 import React, {Component} from 'react'
 import { AsyncStorage } from 'react-native'
-import TabNavigator from './src/routes/TabNavigator'
-import { Loading } from './src/components'
+import TabNavigator from './TabNavigator'
+import { Loading } from '../components'
 
 export default class RootNavigator extends Component {
 	constructor(props) {

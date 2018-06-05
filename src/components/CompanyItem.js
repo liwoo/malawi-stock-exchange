@@ -13,13 +13,12 @@ export default class CompanyItem extends React.Component<{ rate: Rate, onPress: 
         const data = this.props.rate.lastTenDays.map(d => {
             return Object.assign({}, { x: d.date, y: d.rate })
         });
-
         return (
             <TouchableWithoutFeedback onPress={(id) => this.props.onPress(this.props.rate.id)}>
                 <View style={styles.container}>
                     <View style={styles.row}>
                         <Text style={{ fontSize: 16 }}>{this.props.rate.name}</Text>
-                        <Text style={{ fontSize: 14, fontWeight: 'bold' }}>{cf.format(this.props.rate.rate, { symbol: 't' })}</Text>
+                        <Text style={{ fontSize: 14, fontWeight: 'bold' }}>{cf.format(this.props.rate.rate, { symbol: this.props.symbol })}</Text>
                     </View>
                     <View style={[styles.row, { paddingTop: 0 }]}>
                         <View style={{ flexDirection: 'row', alignContent: 'center' }}>
