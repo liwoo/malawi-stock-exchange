@@ -5,15 +5,10 @@
   "devDependencies": {
     "babel-jest": "22.4.1",
     "babel-preset-react-native": "4.0.0",
-    "currency-formatter": "^1.4.2",
     "flow-bin": "0.56.0",
     "jest": "22.4.2",
     "lodash": "^4.17.5",
-    "react-native-svg": "^6.2.2",
-    "react-native-vector-icons": "^4.5.0",
-    "react-navigation": "^1.5.2",
     "react-test-renderer": "16.2.0",
-    "victory-native": "^0.17.1"
   },
   "scripts": {
     "start": "react-native start",
@@ -26,7 +21,13 @@
     "preset": "react-native"
   },
   "dependencies": {
+    "currency-formatter": "^1.4.2",
+    "dateformat": "^3.0.3",
     "react": "^16.3.0-alpha.1",
-    "react-native": "0.54.2"
+    "react-native": "0.54.2",
+    "react-native-svg": "^6.2.2",
+    "react-native-vector-icons": "^4.5.0",
+    "react-navigation": "^1.5.2",
+    "victory-native": "^0.17.1"
   }
 }

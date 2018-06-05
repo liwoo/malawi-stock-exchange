@@ -2,6 +2,7 @@
 
 export default {
     BLUE: '#A0B9F6',
+    BLUE2: '#4a90e2',
     LIME: '#CEF6A6',
     BROWN: '#F5BEA6',
     NAVY: '#7980A7',

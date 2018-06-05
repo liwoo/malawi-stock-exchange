@@ -2,13 +2,15 @@
 import React from 'react'
 import { TabNavigator, TabBarBottom } from 'react-navigation'
 import HomeStack from './HomeStack'
-import { SettingsScreen } from '../screens'
+// import HomeStack from '../screens/DetailsScreen'
+import SettingsStack from './SettingsStack'
 import Ionicons from 'react-native-vector-icons/Ionicons';
 
-export default TabNavigator(
+
+const Tabby = TabNavigator(
     {
         Home: { screen: HomeStack },
-        Settings: { screen: SettingsScreen },
+        Settings: { screen: SettingsStack },
     },
     {
         navigationOptions: ({ navigation }) => ({
@@ -34,3 +36,5 @@ export default TabNavigator(
         swipeEnabled: false,
     }
 );
+
+export default Tabby;
